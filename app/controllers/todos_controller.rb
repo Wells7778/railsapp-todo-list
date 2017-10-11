@@ -25,6 +25,10 @@ class TodosController < ApplicationController
     end
   end
 
+  def destroy
+    @todo.destroy
+    redirect_to todos_url
+  end
   private
 
   def set_todo
