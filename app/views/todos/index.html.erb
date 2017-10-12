@@ -1,36 +1,41 @@
 <div class="row clearfix">
-  <table class="todo-list table">
     <% @todos.each do |todo| %>
       <% if todo.completed? %>
-        <tr class="table-row">
-          <td class="completed">
+        <div class="todo-list col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="completed col-xs-1 col-sm-1 col-md-1 col-lg-1">
             <%= link_to complete_todo_path(todo.id), method: :patch do %>
-              <span style="opacity: 0.4;" class="glyphicon glyphicon-ok"></span>
+              <i style="opacity: 0.4;" class="center-block fa fa-check-square-o fa-2x"></i>
             <% end %>
-          </td>
-          <td class="todo-item">
-            <p style="opacity: 0.4;" class="todo-info"><strike><%= todo.name %></strike></p>
-            <p style="opacity: 0.4;" class="todo-date"><strike><%= todo.due_date %></strike></p>
-          </td>
-        <% else %>
-          <td class="completed">
+          </div>
+          <div class="todo-item col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <p style="opacity: 0.4;" class="todo-info col-xs-8 col-sm-8 col-md-8 col-lg-8"><strike><%= todo.name %></strike></p>
+            <p style="opacity: 0.4;" class="todo-date col-xs-4 col-sm-4 col-md-4 col-lg-4"><strike><%= todo.due_date %></strike></p>
+          </div>
+      <% else %>
+        <div class="todo-list col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="completed col-xs-1 col-sm-1 col-md-1 col-lg-1">
             <%= link_to complete_todo_path(todo.id), method: :patch do %>
-              <span class="glyphicon glyphicon-unchecked"></span>
+              <i class="center-block fa fa-square-o fa-2x"></i>
             <% end %>
-          </td>
-          <td class="todo-item">
-            <p class="todo-info"><%= todo.name %></p>
-            <p class="todo-date"><%= todo.due_date %></p>
-          </td>
+          </div>
+          <div class="todo-item col-xs-9 col-sm-9 col-md-9 col-lg-9">
+            <p class="todo-info col-xs-8 col-sm-8 col-md-8 col-lg-8"><%= todo.name %></p>
+            <p class="todo-date col-xs-4 col-sm-4 col-md-4 col-lg-4"><%= todo.due_date %></p>
+          </div>
       <% end %>
-        <td class="todo-btn">
-          <%= link_to "Detail", todo_path(todo), class: "btn btn-info btn-xs" %>
-          <%= link_to "Edit", edit_todo_path(todo), class: "btn btn-primary btn-xs" %>
-          <%= link_to "Delete", todo_path(todo), method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-danger btn-xs" %>
-        </td>
-      </tr>
+        <div class="todo-btn col-xs-2 col-sm-2 col-ms-2 col-lg-2">
+          <%= link_to todo_path(todo) do %>
+            <i class="fa fa-file-text fa-2x"></i>
+          <% end %>
+          <%= link_to edit_todo_path(todo) do %>
+            <i class="fa fa-edit fa-2x"></i>
+          <% end %>
+          <%= link_to todo_path(todo), method: :delete, data: { confirm: "Are you sure? " } do %>
+            <i class="fa fa-trash fa-2x"></i>
+          <% end %>
+        </div>
+      </div>
   <% end %>
-</table>
-<hr>
-<div><%= link_to "New Todo List", new_todo_path , class: "btn btn-default" %></div>
 </div>
+<hr>
+<div class="links"><%= link_to "New Todo List", new_todo_path ,class: "btn btn-default" %></div>

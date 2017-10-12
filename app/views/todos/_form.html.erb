@@ -5,13 +5,20 @@
     <% end %>
   </ul>
 <% end %>
-
+<div class="form">
 <%= form_for todo do |f| %>
-  <%= f.label :name, "待辦事項 : " %>
-  <%= f.text_field :name %>
-  <%= f.label :due_date, "截止日期 : " %>
-  <%= f.text_field :due_date %>
-  <%= f.label :note, "詳細內容 : " %>
-  <%= f.text_area :note %>
+  <div class="form-group">
+    <%= f.label :name, "待辦事項 : " %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :due_date, "截止日期 : " %>
+    <%= f.text_field :due_date %>
+  </div>
+  <div class="form-group">
+    <%= f.label :note, "詳細內容 : " %>
+    <%= f.text_area :note %>
+  </div>
   <%= f.submit %>
 <% end %>
+</div>
