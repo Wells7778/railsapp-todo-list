@@ -1,0 +1,29 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+* {
+  box-sizing: border-box;
+}
+
+.todo-info, .todo-date , .todo-item, .completed, .todo-btn {
+  display: inline;
+}
+.todo-info {
+  text-align: center;
+  width: 50%;
+}
+.todo-date {
+  text-align: right;
+  width: 20%;
+}
+
+.completed {
+  width: 10%;
+}
+.todo-item {
+  width: 70%;
+}
+.todo-btn {
+  width: 20%;
+}
+

@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, :only => [:show, :edit, :update, :destroy]
+  before_action :set_todo, :only => [:show, :edit, :update, :destroy, :complete]
   def index
     @todos = Todo.all
   end
@@ -29,6 +29,12 @@ class TodosController < ApplicationController
     @todo.destroy
     redirect_to todos_url
   end
+
+  def complete
+    @todo.update_attribute(:completed_at, Time.now)
+    redirect_to todos_url, notice: "Todo is complete"
+  end
+
   private
 
   def set_todo
