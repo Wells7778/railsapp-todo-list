@@ -1,10 +1,10 @@
 <div class="row clearfix">
     <% @todos.each do |todo| %>
       <% if todo.completed? %>
-        <div class="todo-list col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="todo-list col-xs-12 col-sm-12 col-md-12 col-lg-12 clearfix">
           <div class="completed col-xs-1 col-sm-1 col-md-1 col-lg-1">
             <%= link_to complete_todo_path(todo.id), method: :patch do %>
-              <i style="opacity: 0.4;" class="center-block fa fa-check-square-o fa-2x"></i>
+              <i style="opacity: 0.4;" class="fa fa-check-square-o fa-2x"></i>
             <% end %>
           </div>
           <div class="todo-item col-xs-9 col-sm-9 col-md-9 col-lg-9">
@@ -38,4 +38,4 @@
   <% end %>
 </div>
 <hr>
-<div class="links"><%= link_to "New Todo List", new_todo_path ,class: "btn btn-default" %></div>
+<div class="links center-block"><%= link_to "New Todo List", new_todo_path ,class: "btn btn-default" %></div>

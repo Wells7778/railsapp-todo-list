@@ -18,9 +18,12 @@ body {
   background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
-  font-family: 'Lato', sans-serif;
 }
 
+.container {
+  max-width: 70%;
+  width: 800px;
+}
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -75,6 +78,14 @@ input[type="submit"] {
 }
 ::-webkit-input-placeholder { color: $dark; }
 
+.completed {
+  text-align: right;
+}
+
+.todo-item {
+  font-size: 1.4em;
+}
+
 .todo-info {
   text-align: left;
 }
@@ -82,5 +93,5 @@ input[type="submit"] {
   text-align: right;
 }
 .links {
-  display: inline-block;
+  text-align: center;
 }
