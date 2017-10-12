@@ -37,6 +37,12 @@ body {
 label {
   color: $dark;
 }
+#notice {
+  text-align: center;
+  font-size: 1em;
+  color: $dark;
+  font-weight: 100;
+}
 input[type="text"], textarea {
   width: 100%;
   margin: .5em 2% 1em 0;
