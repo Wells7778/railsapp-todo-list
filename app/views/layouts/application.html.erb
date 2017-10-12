@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Todolist</title>
+    <title>My Todolist</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="page-header">
+        <h1>MY TODO LIST
+        <small>this is my todo list for work</small></h1>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,10 +1,15 @@
-<ul>
+<div class="row">
+<ul class="my-to-do-list list-group">
   <% @todos.each do |todo| %>
-  <li>
-    <%= todo.content %>
-    <%= link_to "edit", edit_todo_path(todo) %>
-    <%= link_to "Delete", todo_path(todo), method: :delete, data: { confirm: "Are you sure? " } %>
+  <li class="list-group-item text-center">
+    <%= todo.name %>
+    <%= todo.due_date %>
+    <%= link_to "show", todo_path(todo), class: "btn btn-info" %>
+    <%= link_to "edit", edit_todo_path(todo), class: "btn btn-primary" %>
+    <%= link_to "Delete", todo_path(todo), method: :delete, data: { confirm: "Are you sure? " }, class: "btn btn-danger" %>
   </li>
   <% end %>
 </ul>
-<%= link_to "New Todo List", new_todo_path %>
+<hr>
+<dic><%= link_to "New Todo List", new_todo_path , class: "btn btn-default" %></dic>
+</div>

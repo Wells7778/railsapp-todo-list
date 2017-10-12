@@ -1,13 +1,17 @@
-<% if @todo.errors.present? %>
+<% if todo.errors.present? %>
   <ul>
-    <% @todo.errors.each do |error, message| %>
+    <% todo.errors.each do |error, message| %>
       <li> <%= "#{error.capitalize}  #{message}" %></li>
     <% end %>
   </ul>
 <% end %>
 
-<%= form_for @todo do |f| %>
-  <%= f.label :content, "To Do List" %>
-  <%= f.text_field :content %>
+<%= form_for todo do |f| %>
+  <%= f.label :name, "待辦事項 : " %>
+  <%= f.text_field :name %>
+  <%= f.label :due_date, "截止日期 : " %>
+  <%= f.text_field :due_date %>
+  <%= f.label :note, "詳細內容 : " %>
+  <%= f.text_area :note %>
   <%= f.submit %>
 <% end %>
