@@ -20,10 +20,10 @@ body {
   background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
 }
 
-.container {
-  max-width: 70%;
-  width: 800px;
-}
+/*.container {
+  max-width: 80%;
+  width: 900px;
+}*/
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -80,22 +80,102 @@ input[type="submit"] {
 
 .completed {
   text-align: right;
+  vertical-align: text-top;
+  padding: 0;
 }
 
 .todo-item {
-  font-size: 1.4em;
+  font-size: 0.8em;
 }
 
+/*.todo-list{
+  line-height: 1.2;
+}*/
 .todo-info {
   text-align: left;
+  vertical-align: top;
+  margin-bottom: 0;
 }
 .todo-date {
   text-align: right;
+  vertical-align: top;
+  margin-bottom: 0;
 }
+.todo-btn {
+  text-align: right;
+  vertical-align: text-top;
+}
+
 .links {
   text-align: center;
 }
 
 .todo-title {
   text-align: center;
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .todo-item {
+    font-size: 20px;
+  }
+  i.fa {
+    font-size: 20px;
+  }
+  .todo-info {
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+  .todo-date {
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+  .todo-btn {
+    vertical-align: text-top;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .todo-item {
+    font-size: 24px;
+  }
+
+  i.fa {
+    font-size: 24px;
+  }
+  .todo-info {
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+  .todo-date {
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+  .todo-btn {
+    vertical-align: text-top;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .todo-item {
+    font-size: 1.8em;
+  }
+
+  i.fa {
+    font-size: 30px;
+  }
+  .todo-info {
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+  .todo-date {
+    vertical-align: top;
+    margin-bottom: 0;
+  }
+  .todo-btn {
+    vertical-align: text-top;
+  }
 }
