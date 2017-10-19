@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
   before_action :set_todo, :only => [:show, :edit, :update, :destroy, :complete]
   def index
-    @todos = Todo.all
+    @todos = Todo.all.order("due_date DESC")
   end
 
   def new
