@@ -6,7 +6,8 @@
 }
  $white_opaque: rgba(250, 250, 250, .3);
  $dark: #1F7972;
-
+ $line_height: 2em;
+ $min_h:2em;
 html {
   height: 100%;
 }
@@ -18,6 +19,7 @@ body {
   background:     -ms-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
+  min-width: 290px;
 }
 
 /*.container {
@@ -36,6 +38,9 @@ body {
 
 .forms {
   padding: 0 5%;
+}
+hr {
+  margin: 10px auto;
 }
 label {
   color: $dark;
@@ -82,100 +87,96 @@ input[type="submit"] {
   text-align: right;
   vertical-align: text-top;
   padding: 0;
+  min-height: $min_h;
+  a{
+    i{
+      line-height: $line_height;
+    }
+  }
 }
 
 .todo-item {
   font-size: 0.8em;
-}
-
-/*.todo-list{
-  line-height: 1.2;
-}*/
-.todo-info {
-  text-align: left;
-  vertical-align: top;
-  margin-bottom: 0;
-}
-.todo-date {
-  text-align: right;
-  vertical-align: top;
-  margin-bottom: 0;
+  min-height: $min_h;
+  .row {
+    .todo-info {
+      text-align: left;
+      vertical-align: top;
+      margin-bottom: 0;
+      line-height: $line_height;
+      strike {
+        line-height: $line_height;
+      }
+    }
+    .todo-date {
+      text-align: right;
+      vertical-align: top;
+      margin-bottom: 0;
+      line-height: $line_height;
+      min-height: $min_h;
+      strike {
+        line-height: $line_height;
+      }
+    }
+  }
 }
 .todo-btn {
   text-align: right;
   vertical-align: text-top;
+  line-height: $line_height;
+  min-height: $min_h;
+  a {
+    i.fa {
+      line-height: $line_height;
+    }
+  }
 }
 
 .links {
   text-align: center;
 }
 
-.todo-title {
-  text-align: center;
+h1.todo-title {
+  font-size: 24px;
 }
-
+.todo-sub-title {
+  font-size: 14px;
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .todo-item {
+  #todo-list {
     font-size: 20px;
   }
-  i.fa {
-    font-size: 20px;
+  h1.todo-title {
+    font-size: 28px;
   }
-  .todo-info {
-    vertical-align: top;
-    margin-bottom: 0;
-  }
-  .todo-date {
-    vertical-align: top;
-    margin-bottom: 0;
-  }
-  .todo-btn {
-    vertical-align: text-top;
+  .todo-sub-title {
+    font-size: 16px;
   }
 }
-
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .todo-item {
+  #todo-list {
     font-size: 24px;
   }
-
-  i.fa {
-    font-size: 24px;
+  h1.todo-title {
+    font-size: 32px;
   }
-  .todo-info {
-    vertical-align: top;
-    margin-bottom: 0;
-  }
-  .todo-date {
-    vertical-align: top;
-    margin-bottom: 0;
-  }
-  .todo-btn {
-    vertical-align: text-top;
+  .todo-sub-title {
+    font-size: 20px;
   }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  .todo-item {
-    font-size: 1.8em;
-  }
-
-  i.fa {
+  #todo-list {
     font-size: 30px;
   }
-  .todo-info {
-    vertical-align: top;
-    margin-bottom: 0;
+  h1.todo-title {
+    font-size: 36px;
   }
-  .todo-date {
-    vertical-align: top;
-    margin-bottom: 0;
-  }
-  .todo-btn {
-    vertical-align: text-top;
+  .todo-sub-title {
+    font-size: 24px;
   }
 }

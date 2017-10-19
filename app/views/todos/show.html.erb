@@ -1,8 +1,8 @@
 
-<div class="todo-title"><h2>待辦事項： <%= @todo.name %></h2></div>
+<div class="text-center"><h2>待辦事項： <%= @todo.name %></h2></div>
+<br>
+<div class="text-center"><h3>內容： <%= @todo.note %></h3></div>
 <hr>
-<div class="todo-info"><h3><%= @todo.note %></h3></div>
-<hr>
-<div><h5>截止日期： <%= @todo.due_date %></h5></div>
+<div class="text-center"><h5>截止日期： <%= @todo.due_date %></h5></div>
 
 <div class="links"><%= link_to "Back to index" , todos_path , class: "btn btn-default" %></div>
