@@ -20,12 +20,9 @@ body {
   background:      -o-linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   background:         linear-gradient(40deg, #4CB8C4 10%, #EAECC6 100%);
   min-width: 290px;
+  font-family: 'Lato';
 }
 
-/*.container {
-  max-width: 80%;
-  width: 900px;
-}*/
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -82,6 +79,13 @@ input[type="submit"] {
   }
 }
 ::-webkit-input-placeholder { color: $dark; }
+#todo-list, i.fa {
+    font-size: 12px;
+    line-height: $line_height;
+  }
+.btn, input {
+  font-size: 10px;
+}
 
 .completed {
   text-align: right;
@@ -96,7 +100,6 @@ input[type="submit"] {
 }
 
 .todo-item {
-  font-size: 0.8em;
   min-height: $min_h;
   .row {
     .todo-info {
@@ -145,7 +148,7 @@ h1.todo-title {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #todo-list {
+  #todo-list, i.fa {
     font-size: 20px;
   }
   h1.todo-title {
@@ -154,10 +157,13 @@ h1.todo-title {
   .todo-sub-title {
     font-size: 16px;
   }
+  .btn, input {
+    font-size: 20px;
+  }
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  #todo-list {
+  #todo-list, i.fa {
     font-size: 24px;
   }
   h1.todo-title {
@@ -166,11 +172,14 @@ h1.todo-title {
   .todo-sub-title {
     font-size: 20px;
   }
+  .btn, input {
+    font-size: 24px;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-  #todo-list {
+  #todo-list, i.fa {
     font-size: 30px;
   }
   h1.todo-title {
@@ -178,5 +187,8 @@ h1.todo-title {
   }
   .todo-sub-title {
     font-size: 24px;
+  }
+  .btn, input {
+    font-size: 30px;
   }
 }

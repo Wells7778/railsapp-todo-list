@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'favicon.ico' %>
     <script src="https://use.fontawesome.com/b3a1040621.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -15,8 +16,9 @@
     <div class="container">
         <h1 class="todo-title text-center">MY TODO LIST<br>
         <small class="todo-sub-title">this is my todo list for work</small></h1>
+      <hr>
     </div>
-    <hr>
+
     <div class="container">
       <div id="notice"><%= notice %></div>
       <%= yield %>
