@@ -1,31 +1,28 @@
 <div class="row" id="todo-list">
   <% @todos.each do |todo| %>
+    <div class="row" id="todo-items">
       <% if todo.is_completed %>
-          <div class="completed col-xs-1 col-sm-1 col-md-1 col-lg-1">
+          <div class="completed col-xs-12 col-sm-1 col-md-1 col-lg-1">
             <%= link_to complete_todo_path(todo.id), method: :patch do %>
-              <i style="opacity: 0.4;" class="fa fa-check-square-o"></i>
+              <i style="opacity: 0.4" class="fa fa-check-square-o"></i>
             <% end %>
           </div>
-          <div class="todo-item col-xs-8 col-sm-8 col-md-8 col-lg-8">
-            <div class="row">
-              <p style="opacity: 0.4;" class="todo-info col-xs-6 col-sm-8 col-md-8 col-lg-8"><strike><%= todo.name %></strike></p>
-              <p style="opacity: 0.4;" class="todo-date col-xs-6 col-sm-4 col-md-4 col-lg-4"><strike><%= todo.due_date %></strike></p>
-            </div>
+          <div class="todo-item col-xs-12 col-sm-8 col-md-8 col-lg-8">
+              <p style="opacity: 0.4" class="todo-info"><strike><%= todo.name %></strike></p>
+              <p style="opacity: 0.4" class="todo-date"><strike><%= todo.due_date %></strike></p>
           </div>
       <% else %>
-          <div class="completed col-xs-1 col-sm-1 col-md-1 col-lg-1">
+          <div class="completed col-xs-12 col-sm-1 col-md-1 col-lg-1">
             <%= link_to complete_todo_path(todo.id), method: :patch do %>
               <i class="fa fa-square-o"></i>
             <% end %>
           </div>
-          <div class="todo-item col-xs-8 col-sm-8 col-md-8 col-lg-8">
-            <div class="row">
-              <p class="todo-info col-xs-6 col-sm-8 col-md-8 col-lg-8"><%= todo.name %></p>
-              <p class="todo-date col-xs-6 col-sm-4 col-md-4 col-lg-4"><%= todo.due_date %></p>
-            </div>
+          <div class="todo-item col-xs-12 col-sm-8 col-md-8 col-lg-8">
+              <p class="todo-info"><%= todo.name %></p>
+              <p class="todo-date"><%= todo.due_date %></p>
           </div>
       <% end %>
-          <div class="todo-btn col-xs-3 col-sm-3 col-ms-3 col-lg-3">
+          <div class="todo-btn col-xs-6 col-xs-offset-3 col-sm-3 col-ms-3 col-lg-3">
             <%= link_to todo_path(todo) do %>
               <i class="fa fa-file-text"></i>
             <% end %>
@@ -36,7 +33,10 @@
               <i class="fa fa-trash"></i>
             <% end %>
           </div>
+          <div class="col-xs-3"></div>
+          <div class="clearfix visible-xs-block"></div>
+    </div>
   <% end %>
 </div>
 <hr>
-<div class="links center-block"><%= link_to "New Todo List", new_todo_path ,class: "btn btn-default" %></div>
+<div class="links"><%= link_to "New Todo List", new_todo_path ,class: "btn btn-default" %></div>
