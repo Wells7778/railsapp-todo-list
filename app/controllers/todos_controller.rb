@@ -1,7 +1,7 @@
 class TodosController < ApplicationController
   before_action :set_todo, :only => [:show, :edit, :update, :destroy, :complete]
   def index
-    @todos = Todo.all.order("due_date DESC")
+    @todos = Todo.all.order("is_completed, due_date DESC")
   end
 
   def new
@@ -35,9 +35,13 @@ class TodosController < ApplicationController
   end
 
   def complete
-    if !@todo.completed?
+    if !@todo.is_completed
       @todo.update_attribute(:completed_at, Time.now)
+      @todo.update_attribute(:is_completed, true)
       redirect_to root_path, notice: "待辦事項完成！"
+    else
+      @todo.update_attribute(:is_completed, false)
+      redirect_to root_path, notice: "恢復待辦事項！"
     end
   end
 

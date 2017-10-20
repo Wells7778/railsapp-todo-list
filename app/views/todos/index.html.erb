@@ -1,6 +1,6 @@
 <div class="row" id="todo-list">
   <% @todos.each do |todo| %>
-      <% if todo.completed? %>
+      <% if todo.is_completed %>
           <div class="completed col-xs-1 col-sm-1 col-md-1 col-lg-1">
             <%= link_to complete_todo_path(todo.id), method: :patch do %>
               <i style="opacity: 0.4;" class="fa fa-check-square-o"></i>
