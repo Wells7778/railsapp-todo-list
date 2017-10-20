@@ -91,7 +91,6 @@ input[type="submit"] {
       text-align: center;
     }
     .todo-item {
-      text-align: center;
       p.todo-info {
         margin: 0;
       }
@@ -125,47 +124,72 @@ h1.todo-title {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  #todo-list, i.fa {
-    font-size: 20px;
-  }
-  h1.todo-title {
-    font-size: 28px;
-  }
-  .todo-sub-title {
-    font-size: 16px;
-  }
-  .btn, input {
-    font-size: 20px;
-  }
-}
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  #todo-list, i.fa {
-    font-size: 24px;
-  }
-  h1.todo-title {
-    font-size: 32px;
-  }
-  .todo-sub-title {
-    font-size: 20px;
-  }
-  .btn, input {
-    font-size: 24px;
-  }
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  #todo-list, i.fa {
+  #todo-list {
     font-size: 30px;
+    #todo-items {
+      border: 0;
+      border-radius: 0px;
+      width: 100%;
+      margin:0 auto;
+      .completed {
+        text-align: right;
+      }
+      .todo-item {
+        p.todo-date {
+          font-size: 20px;
+          text-align: right;
+          line-height: 42px;
+        }
+      }
+      .todo-btn {
+        text-align: center;
+      }
+    }
+  }
+  i.fa {
+    font-size: 30px;
+  }
+  .btn, input {
+    font-size: 24px;
   }
   h1.todo-title {
     font-size: 36px;
   }
   .todo-sub-title {
-    font-size: 24px;
+    font-size: 20px;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #todo-list {
+    font-size: 36px;
+    #todo-items {
+      .todo-item {
+        p.todo-date {
+          font-size: 24px;
+          line-height: 51px;
+        }
+      }
+    }
+  }
+  i.fa {
+    font-size: 36px;
   }
   .btn, input {
-    font-size: 30px;
+    font-size: 26px;
+  }
+
+  h1.todo-title {
+    font-size: 40px;
+  }
+  .todo-sub-title {
+    font-size: 26px;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    p.todo-date {
+      line-height: 42px;
   }
 }

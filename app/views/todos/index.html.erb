@@ -8,8 +8,10 @@
             <% end %>
           </div>
           <div class="todo-item col-xs-12 col-sm-8 col-md-8 col-lg-8">
-              <p style="opacity: 0.4" class="todo-info"><strike><%= todo.name %></strike></p>
-              <p style="opacity: 0.4" class="todo-date"><strike><%= todo.due_date %></strike></p>
+            <div class="row">
+              <p class="todo-info col-xs-12 col-sm-8" style="opacity: 0.4" ><strike><%= todo.name %></strike></p>
+              <p class="todo-date col-xs-12 col-sm-4" style="opacity: 0.4"><strike><%= todo.due_date %></strike></p>
+            </div>
           </div>
       <% else %>
           <div class="completed col-xs-12 col-sm-1 col-md-1 col-lg-1">
@@ -18,11 +20,13 @@
             <% end %>
           </div>
           <div class="todo-item col-xs-12 col-sm-8 col-md-8 col-lg-8">
-              <p class="todo-info"><%= todo.name %></p>
-              <p class="todo-date"><%= todo.due_date %></p>
+            <div class="row">
+              <p class="todo-info col-xs-12 col-sm-8"><%= todo.name %></p>
+              <p class="todo-date col-xs-12 col-sm-4"><%= todo.due_date %></p>
+            </div>
           </div>
       <% end %>
-          <div class="todo-btn col-xs-6 col-xs-offset-3 col-sm-3 col-ms-3 col-lg-3">
+          <div class="todo-btn col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 col-ms-3 col-lg-3">
             <%= link_to todo_path(todo) do %>
               <i class="fa fa-file-text"></i>
             <% end %>
