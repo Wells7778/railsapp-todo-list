@@ -137,6 +137,9 @@ h1.todo-title {
         text-align: right;
       }
       .todo-item {
+        p.todo-info {
+          text-align: left;
+        }
         p.todo-date {
           font-size: 20px;
           text-align: right;

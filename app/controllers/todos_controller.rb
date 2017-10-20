@@ -10,6 +10,7 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
+    @todo.is_completed = false
     if @todo.save
       redirect_to root_path
     else
