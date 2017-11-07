@@ -59,6 +59,18 @@ input[type="text"], textarea {
   border-radius: 4px;
   padding: 1em 2em;
 }
+select {
+  width: 10%;
+  margin: .5em 2% 1em 0;
+  display: inline-block;
+  outline: none;
+  background: rgba(250,250,250,.4);
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  padding: 1em 2em;
+  font-size: 16px;
+}
 textarea,{
   height: 200px;
   font-size: 20px;
@@ -67,6 +79,7 @@ input {
   font-size: 20px;
 }
 input[type="submit"] {
+  font-size: 16px;
   background: white;
   outline: none;
   border: none;

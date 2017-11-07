@@ -27,11 +27,11 @@ class TodosController < ApplicationController
   end
 
   def destroy
-    if @todo.due_date < Time.now.to_date
-      redirect_to root_path, notice: "超過日期無法刪除！"
-    else
+    if @todo.can_destroy?
       @todo.destroy
       redirect_to root_path, notice: "待辦事項已刪除！"
+    else
+      redirect_to root_path, notice: "超過日期無法刪除！"
     end
   end
 
