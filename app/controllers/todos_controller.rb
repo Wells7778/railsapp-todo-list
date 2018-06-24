@@ -25,7 +25,9 @@ class TodosController < ApplicationController
       render "edit"
     end
   end
+  def show
 
+  end
   def destroy
     if @todo.can_destroy?
       @todo.destroy
@@ -37,8 +39,7 @@ class TodosController < ApplicationController
 
   def complete
     if !@todo.is_completed
-      @todo.update_attribute(:completed_at, Time.now)
-      @todo.update_attribute(:is_completed, true)
+      @todo.update(completed_at: Time.now, is_completed: true)
       redirect_to root_path, notice: "待辦事項完成！"
     else
       @todo.update_attribute(:is_completed, false)
